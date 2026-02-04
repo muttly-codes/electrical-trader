@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M. Compass Electrical — Licensed Electricians North-West Melbourne | 24/7 Emergency</title>
+    <meta name="description" content="Premium electrical services in Brunswick, Essendon, Moonee Ponds & surrounds. Licensed REC A-Grade electricians. Same-day quotes, emergency 24/7. Call 0475 255 183">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Color System - Bold Industrial Electric Theme */
+            --electric-yellow: #FFD60A;
+            --deep-navy: #0A1128;
+            --safety-orange: #FF6B35;
+            --cool-grey: #E8EDF3;
+            --soft-white: #FAFBFC;
+            --charcoal: #2D3142;
+            --accent-blue: #00A6FB;
+            --success-green: #06D6A0;
+            
+            /* Typography */
+            --font-display: 'Syne', sans-serif;
+            --font-mono: 'Space Mono', monospace;
+            
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 6rem;
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+        }
+
+        body {
+            font-family: var(--font-mono);
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--charcoal);
+            background: var(--soft-white);
+            overflow-x: hidden;
+        }
+
+        /* Typography System */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            line-height: 1.1;
+            font-weight: 800;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 5.5rem);
+            letter-spacing: -0.03em;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            letter-spacing: -0.02em;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Navigation */
+        .emergency-banner {
+            background: var(--safety-orange);
+            color: white;
+            text-align: center;
+            padding: var(--space-xs);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            animation: emergencyPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes emergencyPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.85; }
+        }
+
+        .nav-wrapper {
+            position: sticky;
+            top: 0;
+            background: rgba(250, 251, 252, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 2px solid var(--electric-yellow);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-sm) var(--space-md);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--deep-navy);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--space-md);
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--safety-orange);
+        }
+
+        .phone-nav {
+            background: var(--deep-navy);
+            color: var(--electric-yellow);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 2px solid var(--deep-navy);
+        }
+
+        .phone-nav:hover {
+            background: var(--electric-yellow);
+            color: var(--deep-navy);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 214, 10, 0.3);
+        }
+
+        /* Mobile Navigation */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--deep-navy);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: var(--space-md);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, #1a2744 100%);
+            color: white;
+            padding: var(--space-xl) 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(255, 214, 10, 0.03) 2px,
+                    rgba(255, 214, 10, 0.03) 4px
+                );
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            color: white;
+            margin-bottom: var(--space-md);
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-highlight {
+            color: var(--electric-yellow);
+            display: inline-block;
+            position: relative;
+        }
+
+        .hero-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 0.1em;
+            left: 0;
+            right: 0;
+            height: 0.15em;
+            background: var(--electric-yellow);
+            opacity: 0.3;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            margin-bottom: var(--space-lg);
+            color: var(--cool-grey);
+            font-weight: 400;
+            animation: slideInLeft 0.8s ease-out 0.2s both;
+        }
+
+        .trust-badges {
+            display: flex;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+            flex-wrap: wrap;
+            animation: slideInLeft 0.8s ease-out 0.4s both;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 214, 10, 0.2);
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+
+        .badge-icon {
+            font-size: 1.2rem;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+            animation: slideInLeft 0.8s ease-out 0.6s both;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: 2px solid transparent;
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--electric-yellow);
+            color: var(--deep-navy);
+            border-color: var(--electric-yellow);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--electric-yellow);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 214, 10, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--deep-navy);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--deep-navy);
+            border-color: var(--deep-navy);
+        }
+
+        .btn-outline:hover {
+            background: var(--deep-navy);
+            color: white;
+        }
+
+        /* Emergency Response Section */
+        .emergency-response {
+            background: var(--safety-orange);
+            color: white;
+            padding: var(--space-md) 0;
+            text-align: center;
+        }
+
+        .emergency-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-lg);
+            flex-wrap: wrap;
+        }
+
+        .emergency-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            font-weight: 700;
+        }
+
+        .emergency-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Why Choose Section */
+        .why-choose {
+            padding: var(--space-xl) 0;
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        .feature-card {
+            background: var(--soft-white);
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: var(--electric-yellow);
+            transition: height 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--electric-yellow);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .feature-card:hover::before {
+            height: 100%;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-sm);
+            display: block;
+        }
+
+        .feature-card h3 {
+            margin-bottom: var(--space-xs);
+            color: var(--deep-navy);
+        }
+
+        .feature-card p {
+            color: var(--charcoal);
+            font-size: 0.9rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: var(--space-xl) 0;
+            background: var(--cool-grey);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--electric-yellow), var(--safety-orange));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .service-content {
+            padding: var(--space-md);
+        }
+
+        .service-content h3 {
+            margin-bottom: var(--space-sm);
+            color: var(--deep-navy);
+        }
+
+        .service-content p {
+            margin-bottom: var(--space-md);
+            color: var(--charcoal);
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: var(--space-md);
+        }
+
+        .service-features li {
+            padding: var(--space-xs) 0;
+            color: var(--charcoal);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+
+        .service-features li::before {
+            content: '⚡';
+            color: var(--electric-yellow);
+            font-size: 1rem;
+        }
+
+        /* Credentials Section */
+        .credentials {
+            background: var(--deep-navy);
+            color: white;
+            padding: var(--space-lg) 0;
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+            margin-top: var(--space-md);
+            text-align: center;
+        }
+
+        .credential-item {
+            padding: var(--space-md);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 214, 10, 0.1);
+        }
+
+        .credential-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-sm);
+            color: var(--electric-yellow);
+        }
+
+        .credential-item h4 {
+            margin-bottom: var(--space-xs);
+            color: var(--electric-yellow);
+            font-size: 1.1rem;
+        }
+
+        .credential-item p {
+            color: var(--cool-grey);
+            font-size: 0.9rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: var(--space-xl) 0;
+            background: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        .testimonial-card {
+            background: var(--soft-white);
+            padding: var(--space-md);
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--electric-yellow);
+            position: relative;
+        }
+
+        .stars {
+            color: var(--electric-yellow);
+            font-size: 1.2rem;
+            margin-bottom: var(--space-sm);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: var(--space-md);
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .author-info {
+            flex: 1;
+        }
+
+        .author-name {
+            font-weight: 700;
+            color: var(--deep-navy);
+        }
+
+        .author-location {
+            font-size: 0.85rem;
+            color: var(--charcoal);
+        }
+
+        .author-project {
+            font-size: 0.85rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+        }
+
+        /* Service Areas Section */
+        .service-areas {
+            padding: var(--space-xl) 0;
+            background: var(--cool-grey);
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: var(--space-sm);
+            margin-top: var(--space-lg);
+        }
+
+        .area-item {
+            background: white;
+            padding: var(--space-sm);
+            border-radius: var(--radius-sm);
+            text-align: center;
+            font-weight: 700;
+            color: var(--charcoal);
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .area-item:hover {
+            border-color: var(--electric-yellow);
+            background: var(--electric-yellow);
+            color: var(--deep-navy);
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: var(--space-xl) 0;
+            background: linear-gradient(135deg, var(--deep-navy) 0%, #1a2744 100%);
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+            margin-top: var(--space-lg);
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--electric-yellow);
+            margin-top: 0.2rem;
+        }
+
+        .contact-details h3 {
+            color: var(--electric-yellow);
+            margin-bottom: var(--space-xs);
+            font-size: 1.2rem;
+        }
+
+        .contact-details p {
+            color: var(--cool-grey);
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            padding: var(--space-md);
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(255, 214, 10, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 700;
+            color: var(--electric-yellow);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: var(--space-sm);
+            border-radius: var(--radius-sm);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--electric-yellow);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--deep-navy);
+            color: var(--cool-grey);
+            padding: var(--space-lg) 0 var(--space-md);
+            border-top: 2px solid var(--electric-yellow);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+            margin-bottom: var(--space-lg);
+        }
+
+        .footer-section h4 {
+            color: var(--electric-yellow);
+            margin-bottom: var(--space-md);
+            font-size: 1.1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: var(--space-xs);
+        }
+
+        .footer-section a {
+            color: var(--cool-grey);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--electric-yellow);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--space-md);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.85rem;
+        }
+
+        .license-info {
+            background: rgba(255, 214, 10, 0.1);
+            padding: var(--space-sm);
+            border-radius: var(--radius-sm);
+            margin-top: var(--space-sm);
+            font-weight: 700;
+        }
+
+        /* Floating CTA */
+        .floating-cta {
+            position: fixed;
+            bottom: var(--space-md);
+            right: var(--space-md);
+            background: var(--safety-orange);
+            color: white;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: 50px;
+            box-shadow: 0 8px 24px rgba(255, 107, 53, 0.4);
+            z-index: 999;
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            animation: floatBounce 2s ease-in-out infinite;
+            transition: all 0.3s;
+        }
+
+        @keyframes floatBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .floating-cta:hover {
+            background: var(--electric-yellow);
+            color: var(--deep-navy);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .floating-cta {
+                bottom: var(--space-sm);
+                right: var(--space-sm);
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        .section-label {
+            display: inline-block;
+            background: var(--electric-yellow);
+            color: var(--deep-navy);
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-sm);
+        }
+
+        .section-title {
+            color: var(--deep-navy);
+            margin-bottom: var(--space-sm);
+        }
+
+        .section-subtitle {
+            color: var(--charcoal);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Guarantee Badge */
+        .guarantee-section {
+            background: var(--electric-yellow);
+            padding: var(--space-lg) 0;
+            text-align: center;
+        }
+
+        .guarantee-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .guarantee-content h2 {
+            color: var(--deep-navy);
+            margin-bottom: var(--space-md);
+        }
+
+        .guarantee-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+            margin-top: var(--space-md);
+        }
+
+        .guarantee-item {
+            background: white;
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .guarantee-item-icon {
+            font-size: 2rem;
+            margin-bottom: var(--space-xs);
+        }
+
+        .guarantee-item h4 {
+            color: var(--deep-navy);
+            margin-bottom: var(--space-xs);
+        }
+
+        .guarantee-item p {
+            color: var(--charcoal);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        🚨 24/7 EMERGENCY ELECTRICAL — CALL NOW: 0475 255 183
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-wrapper">
+        <nav class="container">
+            <a href="#" class="logo">M. COMPASS</a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-choose">Why Us</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#areas">Areas</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="tel:+61475255183" class="phone-nav">📞 0475 255 183</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Premium Electrical Work.<br><span class="hero-highlight">Licensed, Insured, On-Time.</span></h1>
+                <p class="hero-subtitle">North-West Melbourne's trusted electricians for residential, commercial & emergency electrical services. Same-day quotes, design-led installations, workmanship guaranteed.</p>
+                
+                <div class="trust-badges">
+                    <div class="badge">
+                        <span class="badge-icon">✓</span>
+                        <span>REC A-Grade Licensed</span>
+                    </div>
+                    <div class="badge">
+                        <span class="badge-icon">🛡️</span>
+                        <span>Fully Insured</span>
+                    </div>
+                    <div class="badge">
+                        <span class="badge-icon">⚡</span>
+                        <span>24/7 Emergency</span>
+                    </div>
+                    <div class="badge">
+                        <span class="badge-icon">⭐</span>
+                        <span>5-Star Rated</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta-group">
+                    <a href="tel:+61475255183" class="btn btn-primary">📞 Call Now — Emergency 24/7</a>
+                    <a href="#contact" class="btn btn-secondary">Get Free Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Response -->
+    <section class="emergency-response">
+        <div class="container">
+            <div class="emergency-content">
+                <div class="emergency-item">
+                    <span class="emergency-icon">⚡</span>
+                    <span>Same-Day Response</span>
+                </div>
+                <div class="emergency-item">
+                    <span class="emergency-icon">🕐</span>
+                    <span>On-Time Arrivals Guaranteed</span>
+                </div>
+                <div class="emergency-item">
+                    <span class="emergency-icon">💬</span>
+                    <span>Transparent Upfront Pricing</span>
+                </div>
+                <div class="emergency-item">
+                    <span class="emergency-icon">✓</span>
+                    <span>100% Workmanship Warranty</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials Section -->
+    <section class="credentials">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: var(--electric-yellow); margin-bottom: var(--space-sm);">Licensed & Certified Electricians</h2>
+                <p style="color: var(--cool-grey); max-width: 700px; margin: 0 auto;">Your safety and compliance are our top priorities. We hold all necessary licenses, insurance, and certifications to work on residential, commercial, and industrial electrical systems.</p>
+            </div>
+            <div class="credentials-grid">
+                <div class="credential-item">
+                    <div class="credential-icon">📋</div>
+                    <h4>REC A-Grade License</h4>
+                    <p>Registered Electrical Contractor with full authority to operate across Victoria</p>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-icon">🛡️</div>
+                    <h4>$20M Public Liability</h4>
+                    <p>Comprehensive insurance coverage for complete peace of mind</p>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-icon">🔧</div>
+                    <h4>Clipsal Accredited</h4>
+                    <p>Certified installer for Clipsal Wiser smart home systems</p>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-icon">🚗</div>
+                    <h4>Tesla Certified</h4>
+                    <p>Authorized installer for Tesla Wall Connector & EV chargers</p>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-icon">⚡</div>
+                    <h4>ESV Compliant</h4>
+                    <p>All work meets Energy Safe Victoria standards & regulations</p>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-icon">✓</div>
+                    <h4>WorkSafe Certified</h4>
+                    <p>Workplace safety certified for commercial & industrial sites</p>
+                </div>
+            </div>
+            <div class="license-info" style="text-align: center; margin-top: var(--space-md);">
+                <p style="margin: 0; color: var(--electric-yellow);">License Number: REC-XXXXX | ABN: XX XXX XXX XXX</p>
+                <p style="margin: 0.5rem 0 0; color: var(--cool-grey); font-size: 0.85rem;">Verify our credentials with Energy Safe Victoria</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose" id="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Why Choose M. Compass</div>
+                <h2 class="section-title">Electrical Work Done Right</h2>
+                <p class="section-subtitle">We combine technical expertise with design sensibility to deliver electrical solutions that perform flawlessly and look premium.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">📱</span>
+                    <h3>Same-Day Quotes</h3>
+                    <p>Call before 2pm and receive your detailed quote the same day. No waiting, no uncertainty.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🕐</span>
+                    <h3>On-Time Arrivals</h3>
+                    <p>We value your time. Arrive within the scheduled window or your service call is free.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💎</span>
+                    <h3>Design-Led Approach</h3>
+                    <p>Not just electricians—we think like designers. Perfect lighting placement, clean cable management, premium finishes.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🧹</span>
+                    <h3>Obsessively Tidy</h3>
+                    <p>Drop sheets, vacuum after every job, spotless switchboards. We leave your space cleaner than we found it.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔍</span>
+                    <h3>Transparent Pricing</h3>
+                    <p>Detailed itemized quotes. No hidden fees. No surprise charges. What we quote is what you pay.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">✓</span>
+                    <h3>Lifetime Workmanship Guarantee</h3>
+                    <p>We stand behind every installation. If our work fails, we fix it free. Period.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🏆</span>
+                    <h3>Premium Materials Only</h3>
+                    <p>Clipsal, Hager, Schneider Electric. We use top-tier components for reliability and longevity.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🎯</span>
+                    <h3>Expert Troubleshooting</h3>
+                    <p>15+ years solving complex electrical faults. We find and fix issues others miss.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Our Services</div>
+                <h2 class="section-title">Comprehensive Electrical Solutions</h2>
+                <p class="section-subtitle">From emergency repairs to complete home automation, we deliver premium electrical services across all sectors.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=800&auto=format&fit=crop" alt="24/7 Emergency Electrical" class="service-image">
+                    <div class="service-content">
+                        <h3>24/7 Emergency Electrical</h3>
+                        <p>Power outages, safety switches tripping, burning smells, sparking outlets? We respond fast, diagnose accurately, fix safely.</p>
+                        <ul class="service-features">
+                            <li>24-hour emergency callout</li>
+                            <li>Average response time: under 60 mins</li>
+                            <li>Safety-first fault diagnosis</li>
+                            <li>Temporary power solutions</li>
+                        </ul>
+                        <a href="tel:+61475255183" class="btn btn-outline">🚨 Emergency Call 0475 255 183</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?q=80&w=800&auto=format&fit=crop" alt="Switchboard Upgrades" class="service-image">
+                    <div class="service-content">
+                        <h3>Switchboard & Safety Upgrades</h3>
+                        <p>Outdated fuse boards are dangerous and illegal. We upgrade to modern RCBOs with arc-fault protection and surge arrestors.</p>
+                        <ul class="service-features">
+                            <li>Replace old ceramic fuses</li>
+                            <li>Install RCD/RCBO safety switches</li>
+                            <li>Add surge & arc-fault protection</li>
+                            <li>Load balancing & circuit labeling</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Get Quote</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1565008576549-57569a49371d?q=80&w=800&auto=format&fit=crop" alt="LED & Feature Lighting" class="service-image">
+                    <div class="service-content">
+                        <h3>LED & Feature Lighting</h3>
+                        <p>Transform spaces with layered lighting design. Pendants, linear LEDs, cove lighting, dimmers, scenes—all expertly installed.</p>
+                        <ul class="service-features">
+                            <li>Lighting design consultation</li>
+                            <li>Statement pendants & chandeliers</li>
+                            <li>LED strip & cove lighting</li>
+                            <li>Smart dimming & color control</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Get Quote</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop" alt="Smart Home & Automation" class="service-image">
+                    <div class="service-content">
+                        <h3>Smart Home & Automation</h3>
+                        <p>Voice control, automated scenes, remote access. Clipsal Wiser, Shelly, HomeKit, Google, Alexa—we integrate it all seamlessly.</p>
+                        <ul class="service-features">
+                            <li>Clipsal Wiser certified installer</li>
+                            <li>Voice assistant integration</li>
+                            <li>Automated lighting scenes</li>
+                            <li>Remote monitoring & control</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Get Quote</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=800&auto=format&fit=crop" alt="EV Charger Installation" class="service-image">
+                    <div class="service-content">
+                        <h3>EV Charger Installations</h3>
+                        <p>Tesla Wall Connector, Wallbox, Zappi—we install all major EV chargers with proper load management and metering.</p>
+                        <ul class="service-features">
+                            <li>Tesla certified installer</li>
+                            <li>Load calculation & management</li>
+                            <li>Cable runs up to 30m</li>
+                            <li>Smart charging capability</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Get Quote</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop" alt="Outdoor & Pool Lighting" class="service-image">
+                    <div class="service-content">
+                        <h3>Outdoor & Pool Lighting</h3>
+                        <p>Entertaining areas, pathway lighting, pool features, garden uplighting. IP-rated, weather-proof, stunning results.</p>
+                        <ul class="service-features">
+                            <li>Deck & pergola lighting</li>
+                            <li>Pool & spa lighting (compliant)</li>
+                            <li>Garden feature lighting</li>
+                            <li>Security & motion sensors</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Get Quote</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=800&auto=format&fit=crop" alt="Home Renovations" class="service-image">
+                    <div class="service-content">
+                        <h3>Renovations & Rewires</h3>
+                        <p>Live-in renovations with minimal disruption. Full house rewires, kitchen/bathroom upgrades, extensions—coordinated with builders.</p>
+                        <ul class="service-features">
+                            <li>Staged work for occupied homes</li>
+                            <li>Builder & designer coordination</li>
+                            <li>Complete rewiring services</li>
+                            <li>Heritage home specialists</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Get Quote</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=800&auto=format&fit=crop" alt="Commercial Fit-outs" class="service-image">
+                    <div class="service-content">
+                        <h3>Retail & Office Fit-outs</h3>
+                        <p>Commercial electrical for retail, offices, hospitality. Clean conduit runs, discrete cable management, on-brand lighting.</p>
+                        <ul class="service-features">
+                            <li>Retail lighting design</li>
+                            <li>Data & comms infrastructure</li>
+                            <li>Commercial compliance & testing</li>
+                            <li>After-hours installation available</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Get Quote</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?q=80&w=800&auto=format&fit=crop" alt="Power Points & Data" class="service-image">
+                    <div class="service-content">
+                        <h3>Power & Data Points</h3>
+                        <p>Additional power outlets, USB charging ports, data cabling, ethernet points. Positioned exactly where you need them.</p>
+                        <ul class="service-features">
+                            <li>GPO installation & relocation</li>
+                            <li>USB charging sockets</li>
+                            <li>Data & ethernet cabling</li>
+                            <li>Hidden cable pathways</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Get Quote</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop" alt="Air Conditioning Installation" class="service-image">
+                    <div class="service-content">
+                        <h3>Split System Air Conditioning</h3>
+                        <p>Electrical installation for split system AC units. Dedicated circuits, proper cable sizing, compliant outdoor connections.</p>
+                        <ul class="service-features">
+                            <li>Dedicated AC circuits</li>
+                            <li>Proper cable sizing & protection</li>
+                            <li>Outdoor weatherproof connections</li>
+                            <li>Multi-head system wiring</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-content">
+                <h2>Our Promises to You</h2>
+                <div class="guarantee-items">
+                    <div class="guarantee-item">
+                        <div class="guarantee-item-icon">⏰</div>
+                        <h4>On-Time or Free</h4>
+                        <p>If we're late to your appointment without notice, your service call is free</p>
+                    </div>
+                    <div class="guarantee-item">
+                        <div class="guarantee-item-icon">💯</div>
+                        <h4>Price Match</h4>
+                        <p>Find a lower written quote for the same work? We'll match it</p>
+                    </div>
+                    <div class="guarantee-item">
+                        <div class="guarantee-item-icon">🛡️</div>
+                        <h4>Lifetime Workmanship</h4>
+                        <p>All our installations covered for as long as you own the property</p>
+                    </div>
+                    <div class="guarantee-item">
+                        <div class="guarantee-item-icon">😊</div>
+                        <h4>100% Satisfaction</h4>
+                        <p>Not happy? We'll make it right or refund your money</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">What Clients Say</div>
+                <h2 class="section-title">Real Reviews from Real Projects</h2>
+                <p class="section-subtitle">Don't take our word for it. Here's what our clients say about working with M. Compass Electrical.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Our renovation was complex—heritage home, tricky ceiling access, design-led lighting throughout. M. Compass handled it flawlessly. The switchboard is a work of art, every circuit perfectly labeled. Lighting placement is perfect. And they left the place spotless every day. Can't recommend highly enough."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Alex P.</div>
+                            <div class="author-location">Brunswick</div>
+                            <div class="author-project">Full House Renovation & Rewire</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"10pm on a Friday, main switch failed, house completely dark. Called M. Compass and they were here within 45 minutes. Diagnosed the issue (corroded neutral), installed temporary power so our freezer stayed on, and came back Saturday morning with parts to fix it properly. Professional, calm, and genuinely cared. Absolute legends."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Sam K.</div>
+                            <div class="author-location">Moonee Ponds</div>
+                            <div class="author-project">Emergency Switchboard Repair</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"We're a boutique retail store in Essendon and the electrical work is immaculate. Track lighting positioned perfectly for product display, conduits hidden, cable management absolutely invisible. Looks premium, which is exactly what we needed. They came back twice to fine-tune beam angles at no extra charge."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Mark R.</div>
+                            <div class="author-location">Essendon</div>
+                            <div class="author-project">Retail Store Fit-out</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Quote was detailed and transparent—line-by-line breakdown. They arrived exactly when promised (shocking, I know). Work was meticulous. Even showed me everything in the ceiling space before closing it up. The finish is next-level. You can tell they take pride in their work. Will be using them for all future electrical."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Priya S.</div>
+                            <div class="author-location">Northcote</div>
+                            <div class="author-project">Kitchen Extension & New Circuits</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Had them install a Tesla Wall Connector for our Model Y. They calculated the load properly, ran the cable neatly along the fence, installed a dedicated meter so we can track costs. Works perfectly. They even helped configure the app. Great service, fair price, done right."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">David L.</div>
+                            <div class="author-location">Ascot Vale</div>
+                            <div class="author-project">Tesla EV Charger Install</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"We're builders and we use M. Compass on most of our projects. They're reliable, they coordinate well with other trades, and the finish quality is consistently high. Clients love them. No drama, just good work delivered on schedule. That's rare."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">James H.</div>
+                            <div class="author-location">Brunswick</div>
+                            <div class="author-project">Trade Partner — Multiple Projects</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="service-areas" id="areas">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Service Coverage</div>
+                <h2 class="section-title">North-West Melbourne & Surrounds</h2>
+                <p class="section-subtitle">We proudly serve residential and commercial clients across Melbourne's inner north-west suburbs.</p>
+            </div>
+
+            <div class="areas-grid">
+                <div class="area-item">Brunswick</div>
+                <div class="area-item">Coburg</div>
+                <div class="area-item">Pascoe Vale</div>
+                <div class="area-item">Essendon</div>
+                <div class="area-item">Moonee Ponds</div>
+                <div class="area-item">Ascot Vale</div>
+                <div class="area-item">Kensington</div>
+                <div class="area-item">Flemington</div>
+                <div class="area-item">Parkville</div>
+                <div class="area-item">Carlton</div>
+                <div class="area-item">Fitzroy</div>
+                <div class="area-item">Northcote</div>
+                <div class="area-item">Thornbury</div>
+                <div class="area-item">Preston</div>
+                <div class="area-item">Keilor East</div>
+                <div class="area-item">Niddrie</div>
+                <div class="area-item">Tullamarine</div>
+                <div class="area-item">Sunbury</div>
+                <div class="area-item">Epping</div>
+                <div class="area-item">Point Cook</div>
+                <div class="area-item">Maribyrnong</div>
+                <div class="area-item">Yarraville</div>
+                <div class="area-item">Footscray</div>
+                <div class="area-item">Williamstown</div>
+                <div class="area-item">Strathmore</div>
+                <div class="area-item">Glenroy</div>
+                <div class="area-item">Fawkner</div>
+                <div class="area-item">Hadfield</div>
+            </div>
+
+            <p style="text-align: center; margin-top: var(--space-md); color: var(--charcoal);">
+                <strong>Don't see your suburb?</strong> We service additional areas—call us to confirm coverage.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label" style="background: var(--electric-yellow); color: var(--deep-navy);">Get In Touch</div>
+                <h2 style="color: white; margin-bottom: var(--space-sm);">Request Your Free Quote</h2>
+                <p style="color: var(--cool-grey); max-width: 700px; margin: 0 auto;">Same-day quotes for all electrical work. Emergency service available 24/7. Call now or fill in the form and we'll respond within 2 hours.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Call Us Anytime</h3>
+                            <p><strong style="font-size: 1.3rem; color: var(--electric-yellow);">0475 255 183</strong></p>
+                            <p>Emergency: 24/7 including weekends<br>General enquiries: Mon-Sat 7am-6pm</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h3>Email Us</h3>
+                            <p><a href="mailto:hello@mcompasselectrical.com.au" style="color: var(--electric-yellow); text-decoration: none;">hello@mcompasselectrical.com.au</a></p>
+                            <p>We respond within 2 hours during business hours</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Service Area</h3>
+                            <p>North-West Melbourne & Surrounds</p>
+                            <p>Brunswick, Essendon, Moonee Ponds, Northcote & 25+ suburbs</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🕐</div>
+                        <div class="contact-details">
+                            <h3>Business Hours</h3>
+                            <p><strong>Mon-Fri:</strong> 7:00am - 6:00pm<br>
+                            <strong>Saturday:</strong> 8:00am - 4:00pm<br>
+                            <strong>Sunday:</strong> Emergency only<br>
+                            <strong style="color: var(--safety-orange);">Emergency Service: 24/7/365</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3 style="color: var(--electric-yellow); margin-bottom: var(--space-md);">Request a Quote</h3>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="suburb">Suburb *</label>
+                            <input type="text" id="suburb" name="suburb" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Required *</label>
+                            <input type="text" id="service" name="service" placeholder="e.g., Switchboard upgrade, EV charger install" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your electrical needs..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Quote Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>M. Compass Electrical</h4>
+                    <p>Premium electrical services for North-West Melbourne. Licensed REC A-Grade electricians delivering design-led installations with guaranteed workmanship.</p>
+                    <p style="margin-top: var(--space-md);"><strong>License:</strong> REC-XXXXX<br>
+                    <strong>ABN:</strong> XX XXX XXX XXX<br>
+                    <strong>Insurance:</strong> $20M Public Liability</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">24/7 Emergency Electrical</a></li>
+                        <li><a href="#services">Switchboard Upgrades</a></li>
+                        <li><a href="#services">LED & Feature Lighting</a></li>
+                        <li><a href="#services">Smart Home Automation</a></li>
+                        <li><a href="#services">EV Charger Installation</a></li>
+                        <li><a href="#services">Outdoor & Pool Lighting</a></li>
+                        <li><a href="#services">Renovations & Rewires</a></li>
+                        <li><a href="#services">Commercial Fit-outs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Service Areas</h4>
+                    <ul>
+                        <li>Brunswick & Brunswick East</li>
+                        <li>Coburg & Pascoe Vale</li>
+                        <li>Essendon & Moonee Ponds</li>
+                        <li>Ascot Vale & Kensington</li>
+                        <li>Northcote & Thornbury</li>
+                        <li>Carlton & Fitzroy</li>
+                        <li>Parkville & Flemington</li>
+                        <li><a href="#areas">View all suburbs →</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><strong>Phone:</strong> <a href="tel:+61475255183">0475 255 183</a></li>
+                        <li><strong>Email:</strong> <a href="mailto:hello@mcompasselectrical.com.au">hello@mcompasselectrical.com.au</a></li>
+                        <li><strong>Emergency:</strong> 24/7 Available</li>
+                    </ul>
+                    <p style="margin-top: var(--space-md);"><strong>Business Hours:</strong><br>
+                    Mon-Fri: 7am-6pm<br>
+                    Sat: 8am-4pm<br>
+                    Sun: Emergency only</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 M. Compass Electrical. All rights reserved.</p>
+                <p style="margin-top: var(--space-xs);">Licensed Electrical Contractor | REC A-Grade | Energy Safe Victoria Compliant</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Emergency CTA -->
+    <a href="tel:+61475255183" class="floating-cta">
+        <span>🚨</span>
+        <span>Emergency? Call Now</span>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href.length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Close mobile menu if open
+                        document.getElementById('navLinks').classList.remove('active');
+                    }
+                }
+            });
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.feature-card, .service-card, .testimonial-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
